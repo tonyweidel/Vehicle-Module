@@ -10,12 +10,12 @@ Our goal is to create a vehicle-module which has 5 instance variables and shares
 -  milesDriven (the total amount of miles driven on the car)
 
 ### Public Functions
-    -  Getter functions
-        -  totalMiles();
-        -  fuelLeft();
-    -  Setter functions
-        -  fill() takes one parameter named percent which is a decimal in between 0 and 1.  Add the percent to the fuel instance-variable.  Stop the function from going over 100% full by using conditional statements.  I recommend making a local-variable to aide in your calculations.
-        -  drive() takes one parameter named hours which represents how long you drove the car in a continuous path.  This functions should decrease the fuel and increase the milesDriven instance-variables simultaneously.  Also build in a conditional statement which stops the car from driving past its fuel limit.  We DO NOT have infinite fuel.
+-  Getter functions
+    -  totalMiles();
+    -  fuelLeft();
+-  Setter functions
+    -  fill() takes one parameter named percent which is a decimal in between 0 and 1.  Add the percent to the fuel instance-variable.  Stop the function from going over 100% full by using conditional statements.  I recommend making a local-variable to aide in your calculations.
+    -  drive() takes one parameter named hours which represents how long you drove the car in a continuous path.  This functions should decrease the fuel and increase the milesDriven instance-variables simultaneously.  Also build in a conditional statement which stops the car from driving past its fuel limit.  We DO NOT have infinite fuel.
 ### Private Functions
 -  engineEfficiency()
     -  does not accept any parameters
