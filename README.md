@@ -25,5 +25,5 @@ Our goal is to create a vehicle-module which has 5 instance variables and shares
 ### Reminder
 Make sure in addition to declaring and defining these functions inside of the module, that you add a return statement with each function name separated by commas, without the parentheses.
 
-# TestVehicle function
+# TestVehicle file
 In a second file named Test Vehicle (no spaces), create two different vehicles, execute their public functions, and show that they meet expectations.
