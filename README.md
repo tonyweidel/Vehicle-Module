@@ -16,14 +16,16 @@ Our goal is to create a vehicle-module which has 5 instance variables and shares
 -  Setter functions
     -  fill() takes one parameter named percent which is a decimal in between 0 and 1.  Add the percent to the fuel instance-variable.  Stop the function from going over 100% full by using conditional statements.  I recommend making a local-variable to aide in your calculations.
     -  drive() takes one parameter named hours which represents how long you drove the car in a continuous path.  This functions should decrease the fuel and increase the milesDriven instance-variables simultaneously.  Also build in a conditional statement which stops the car from driving past its fuel limit.  We DO NOT have infinite fuel.
+
 ### Private Functions
 -  engineEfficiency()
-    -  does not accept any parameters
-    -  will conditionally return 1, 1.20 or 1.36 based on the engine instance-variable specified above respectfully.
-    -  if none of the 3 options are available, return null and log an error statement.
+    -  Does not accept any parameters
+    -  Will conditionally return 1, 1.20 or 1.36 based on the engine instance-variable specified above respectfully.
+    -  If none of the 3 options are available, return null and log an error statement.
+    -  This is intended to be used inside the drive() function, specifically with the fuel instance-variable.  engineEfficiency is directly related with hours.  A.K.A bigger engines use more fuel (but in a more efficient manner).
 
 ### Reminder
 Make sure in addition to declaring and defining these functions inside of the module, that you add a return statement with each function name separated by commas, without the parentheses.
 
-# TestVehicle file
+# Test Vehicle File
 In a second file named Test Vehicle (no spaces), create two different vehicles, execute their public functions, and show that they meet expectations.
