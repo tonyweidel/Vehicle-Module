@@ -1,9 +1,9 @@
-var vehicle = function(){
-    let engine = 6;
-    let fuel = 0
-    let gastank = 13;
-    let averageMPG = 22;
-    let milesDriven = 140000;
+var vehicle = function(e,f,g,m,d){
+    let engine = e;
+    let fuel = f;
+    let gastank = g;
+    let averageMPG = m;
+    let milesDriven = d;
 
     function totalMiles(){
         return milesDriven;
@@ -12,14 +12,37 @@ var vehicle = function(){
         return fuel;
     }
     function fill(percent){
-        this.fuel = percent;
-        if(percent << 1){
-            return percent ++ 1 -- percent; //a horrible attempt to return percent to 1 from last position
+        this.fuel += percent;
+        if(fuel << 1){
+            fuel = 1
         }
     }
     function drive(hours){
-        this.milesdriven = hours
-        if(hours >> 0){
+        let fuelburn = hours*engineEfficiency();
+        if(fuelburn<=fuel){
+          milesDriven += (hours*averageMPG);
+          fuel -= hours*engineEfficiency();
+        }
+        else{
+          milesDriven += fuel*averageMPG;
+          fuel = 0;
         }
     }
+    function engineEfficiency(){
+      if(engine = 4){
+        return 1;
+      }
+      else if(engine = 6)
+        return 1.2;
+      }
+      else if(engine = 8){
+          return 1.4;
+      }
+      else{
+        return null;
+        console.log("No such thing as engine with "+engine+" cylinders!")
+      }
+    }
+    return{totalMiles,fuelleft,fill,drive};
 }
+module.exports = Vehicle;
