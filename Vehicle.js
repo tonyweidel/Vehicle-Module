@@ -12,8 +12,8 @@ var vehicle = function(e,f,g,m,d){
         return fuel;
     }
     function fill(percent){
-        this.fuel += percent;
-        if(fuel << 1){
+        fuel += percent;
+        if(fuel > 1){
             fuel = 1
         }
     }
@@ -32,7 +32,7 @@ var vehicle = function(e,f,g,m,d){
       if(engine = 4){
         return 1;
       }
-      else if(engine = 6)
+      else if(engine = 6){
         return 1.2;
       }
       else if(engine = 8){
@@ -43,6 +43,6 @@ var vehicle = function(e,f,g,m,d){
         console.log("No such thing as engine with "+engine+" cylinders!")
       }
     }
-    return{totalMiles,fuelleft,fill,drive};
+    return{totalMiles,fuelLeft,fill,drive};
 }
-module.exports = Vehicle;
+module.exports = vehicle;
